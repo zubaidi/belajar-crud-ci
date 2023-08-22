@@ -3,7 +3,7 @@
         <a href="<?= base_url('siswa/tambah')?>" class="btn btn-primary"><i class="fas fa-plus fa-sm"></i> Tambah Data Siswa</a>
     </div>
     <div class="card-body">
-        <table id="example1" class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>No</th>
@@ -14,10 +14,10 @@
                     <th>Aksi</th>
                 </tr>
             </thead>
-            <?php $no = 1; foreach($siswadata as $row) : ?>
+            <?php foreach($siswadata as $row) : ?>
             <tbody>
                 <tr>
-                    <td><?= $no++ ?></td>
+                    <td><?= ++$start_page; ?></td>
                     <td><?= $row->nama_siswa ?></td>
                     <td><?= $row->kelas_siswa ?></td>
                     <td><?= $row->alamat_siswa ?></td>
@@ -30,6 +30,7 @@
             </tbody>
             <?php endforeach ?>
         </table>
+        <?= $this->pagination->create_links(); ?>
     </div>
     <!-- /.card-body -->
 </div>

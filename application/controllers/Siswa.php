@@ -11,7 +11,17 @@ class Siswa extends CI_Controller {
     public function index() 
     {
         $data['title'] = 'Siswa';
-        $data['siswadata'] = $this->SiswaModel->getData()->result();
+        //$data['siswadata'] = $this->SiswaModel->getData();
+
+        // set paging
+        $config['base_url'] = 'http://localhost/belajar-crud-ci/siswa/index';
+        $config['total_rows'] = $this->SiswaModel->getJumlahSiswa();
+        $config['per_page'] = 10;
+
+        $this->pagination->initialize($config);
+
+        $data['start_page'] = $this->uri->segment(3);
+        $data['siswadata'] = $this->SiswaModel->getDataSiswa($config['per_page'], $data['start_page']);
         $this->load->view('templetes/header', $data);
         $this->load->view('templetes/sidebar', $data);
         $this->load->view('siswa', $data);
