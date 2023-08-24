@@ -10,7 +10,7 @@ class Siswa extends CI_Controller {
 
     public function index() 
     {
-        $data['title'] = 'Siswa';
+        $data['title'] = 'Data Siswa';
         //$data['siswadata'] = $this->SiswaModel->getData();
 
         // set paging
@@ -51,7 +51,7 @@ class Siswa extends CI_Controller {
         $data['siswadata'] = $this->SiswaModel->getDataSiswa($config['per_page'], $data['start_page']);
         $this->load->view('templetes/header', $data);
         $this->load->view('templetes/sidebar', $data);
-        $this->load->view('siswa', $data);
+        $this->load->view('siswa');
         $this->load->view('templetes/footer');
     }
 

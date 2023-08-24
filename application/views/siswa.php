@@ -3,7 +3,7 @@
         <a href="<?= base_url('siswa/tambah')?>" class="btn btn-primary"><i class="fas fa-plus fa-sm"></i> Tambah Data Siswa</a>
     </div>
     <div class="card-body">
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped" id="table1">
             <thead>
                 <tr>
                     <th>#</th>
@@ -30,7 +30,7 @@
             </tbody>
             <?php endforeach ?>
         </table>
-        <?= $this->pagination->create_links(); ?>
+        <!--?= $this->pagination->create_links(); ?-->
     </div>
     <!-- /.card-body -->
 </div>
