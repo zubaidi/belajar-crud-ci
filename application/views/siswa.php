@@ -14,10 +14,10 @@
                     <th>Aksi</th>
                 </tr>
             </thead>
-            <?php foreach($siswadata as $row) : ?>
             <tbody>
+                <?php $no = 1; foreach($siswadata as $row) : ?>
                 <tr>
-                    <td><?= ++$start_page; ?></td>
+                    <td><?= $no++ ?></td>
                     <td><?= $row->nama_siswa ?></td>
                     <td><?= $row->kelas_siswa ?></td>
                     <td><?= $row->alamat_siswa ?></td>
@@ -27,8 +27,8 @@
                         <a href="" class="btn btn-danger"><i class="fas fa-trash fa-sm"></i></a>
                     </td>
                 </tr>
+                <?php endforeach ?>
             </tbody>
-            <?php endforeach ?>
         </table>
         <!--?= $this->pagination->create_links(); ?-->
     </div>

@@ -17,7 +17,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+<script type="text/javascript"></script>
 <!-- jQuery -->
 <script src="<?= base_url('assets/templete/plugins/jquery/jquery.min.js') ?>"></script>
 <!-- Bootstrap 4 -->
@@ -39,10 +39,8 @@
 <script src="<?= base_url('assets/templete/dist/js/adminlte.min.js') ?>"></script>
 <!-- Page specific script -->
 <script>
-  $(function () {
-    $("#table1").DataTable({
-      "paging": true
-    })
+  $(document).ready(function () {
+    $("#table1").DataTable()
   });
 </script>
 </body>
