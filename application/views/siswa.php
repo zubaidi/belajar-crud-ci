@@ -6,7 +6,7 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th>#</th>
                     <th>Nama Siswa</th>
                     <th>Kelas</th>
                     <th>Alamat Lengkap</th>
