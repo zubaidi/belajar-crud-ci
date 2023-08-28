@@ -18,4 +18,8 @@ class SiswaModel extends CI_Model {
         $this->db->insert('tb_siswa', $data);
     }
 
+    public function updateData($data) {
+        $this->db->get_where('tb_siswa', $data);
+    }
+
 }

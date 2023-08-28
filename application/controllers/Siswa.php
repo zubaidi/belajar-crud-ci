@@ -79,14 +79,14 @@ class Siswa extends CI_Controller {
                 'no_telp' => $this->input->post('no_telp')
             );
             $this->SiswaModel->insertData($data);
-            $this->session->flashdata('Pesan',
-                '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    Data Berhasil Ditambahkan.
+            $this->session->set_flashdata('pesan', '
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Sukses!!!</strong> Data siswa baru berhasil ditambahkan.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>'
-            );
+                </div>
+            ');
             redirect('siswa');
         }
     }

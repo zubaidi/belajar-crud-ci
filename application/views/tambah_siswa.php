@@ -39,12 +39,11 @@
             <!-- /.card -->
             </div>
           <!--/.col (left) -->
-          <!-- right column -->
-          <div class="col-md-6">
-
-          </div>
-          <!--/.col (right) -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
+        <!-- right column -->
+        <div class="col-md-6">
+      </div>
+    <!--/.col (right) -->
+    </div>
+  <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</section>
